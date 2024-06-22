@@ -7,6 +7,9 @@ btn4.addEventListener("click", async ()=>{
     let quantity = document.getElementById("inputAddress").value;
     let addressArray = await getRandomAddresses(quantity);
     h1.innerText = `Generating ${quantity} addresses`;
+    setTimeout(()=>{
+        h1.innerText = "Generate random addresses";
+    }, 5000);
     ol.innerText = "";
     for(let i=0;i<addressArray.length;i++){
         let li = document.createElement("li");
